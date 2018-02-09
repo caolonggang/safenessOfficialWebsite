@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>平安普惠-贷款试算器-车贷详情</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/computer.css" />
+	<script src="js/common.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+     <section class="business_tit">
+	    <a class="business_goback"></a>
+        <p class="tc business_txt">车贷试算器</p>
+    </section>
+    <section class="computer_detitle detiele_top1">
+	    <ul class="com_tit">
+		   <li class="active" id="one1" onclick="setTab('one', 1, 2)">等额本息</li>
+		   <li id="one2" onclick="setTab('one', 2, 2)">等额本金</li>
+		</ul>
+	</section>
+	<!-- 等额本息 -->
+	<section id="con_one_1">
+		<div class="computer_detitle detiele_top2">
+			<p class="p1">每月月供参考(元）</p>
+			<p class="p2" id="m1">6806.56</p>
+		</div>
+		<div class="com_main">
+		   <ul class="comp_ul">
+			  <li>总利息（万）<p id="m2">18.06</p></li>
+			  <li>总还款（万）<p id="m3">68.06</p></li>
+			  <li>总贷款（万）<p id="m4">50</p></li>
+			  <li>贷款月数<p id="m5">240</p></li>
+		   </ul>
+		</div>
+		<div class="detitlep">等额本息还款详情<span></span></div>
+		<div class="detitles">
+		    <p class="det_top"><span class="span1">月份</span><span>月供本金</span><span>月供利息</span><span>剩余</span></p>
+			<div class="mytablebox">
+				<table class="mytable" id="mytable">
+				</table>
+			</div>
+		</div>
+	</section>
+	<!-- 等额本金 -->
+	<section id="con_one_2" style="display:none">
+		<div class="computer_detitle detiele_top2">
+			<p class="p1">每月月供参考(元）</p>
+			<p class="p2" id="m11">7638.31</p>
+		</div>
+		<div class="com_main">
+		   <ul class="comp_ul">
+			  <li>总利息（万）<p id="m22">20.12</p></li>
+			  <li>总还款（万）<p id="m33">71.15</p></li>
+			  <li>总贷款（万）<p id="m44">50</p></li>
+			  <li>贷款月数<p  id="m55">240</p></li>
+		   </ul>
+		</div>
+		<div class="detitlep">等额本息还款详情<span></span></div>
+		<div class="detitles">
+		     <p class="det_top"><span class="span1">月份</span><span >月供本金</span><span >月供利息</span><span>剩余</span></p>
+			 <div class="mytablebox">
+			    <table class="mytable" id="mytable2" ></table>
+			</div>
+		</div>
+	</section>
+  </div>
+<script>
+$(function(){
+     var carPrice = Number($.cookie("carPrice")); //获取车价cookie并转化为数字类型
+     var firstPay = Number($.cookie("firstPay")); //获取首付几成cookie并转化为数字类型
+     var day = Number($.cookie("day")); //获取期限（年）cookie并转化为数字类型
+     var lv = Number($.cookie("lv")); //获取年利率cookie并转化为数字类型
+	 var monlv = lv/100/12; //月利率
+	 var monDay = day*12; //贷款期限（月）
+	 var M = (1+monlv);
+	// alert("车价："+carPrice+";首付几成："+firstPay+";期限："+day+";年利率："+lv+";月利率："+monlv);
+	 //等额本息计算开始
+	   var count =  carPrice-carPrice*firstPay*0.1; //总贷款  count.toFixed(2)  保留两位小数 ，返回结果是字符串类型
+	   var monthGive = (count*monlv*Math.pow(M, monDay))/(Math.pow(M, monDay)-1); //每月月供
+	   var countlx =  monDay* monthGive- count;//总利息
+	   var countPay = count+countlx;//总还款
+	  
+	 //等额本金计算开始
+	 var monbj2 =count/monDay;//月供本金
+	 var monthGive2 = (count/monDay)+(count-monbj2*1)*monlv;   //每月月供(第一个月的)
+	 var countlx2 = (monDay+1)*count*monlv/2;//总利息
+	 var countPay2 = count+countlx2;//总还款
+	 
+	 //等额本息赋值开始
+	 var m1 = monthGive*10000;
+	 $('#m1').text(m1.toFixed(2));
+	 $('#m2').text(countlx.toFixed(2));
+	 $('#m3').text(countPay.toFixed(2));
+	 $('#m4').text(count.toFixed(2));
+	 $('#m5').text(monDay);
+	 for(var i=1;i<=monDay;i++){
+	    var ii = i-1;
+	    var a = Math.pow(M, i)-Math.pow(M, ii);
+	    var b = Math.pow(M, monDay)-1;
+	    var c = Math.pow(M, monDay)-Math.pow(M, ii);
+	    var monbj = count* monlv*Math.pow(M, ii)/b;//月供本金（万元）
+	    var monbjs = monbj*10000;//月供本金 (元)
+	    var monlx = count* monlv*c/b;//月供利息(i代表月号)(万元)
+	    var monlxs = monlx*10000;//月供利息(i代表月号)(元)
+		 var no_give = count*monlv*Math.pow(M, monDay)*(monDay-i)/(Math.pow(M, monDay)-1)*10000;//剩余还款
+	    $('#mytable').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbjs.toFixed(2)+'</td><td width="25%">'+monlxs.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give.toFixed(2)+'</td></tr> ');
+	 }
+	//等额本金赋值开始
+	var m11 = monthGive2*10000;
+	 $('#m11').text(m11.toFixed(2));
+	 $('#m22').text(countlx2.toFixed(2));
+	 $('#m33').text(countPay2.toFixed(2));
+	 $('#m44').text(count.toFixed(2));
+	 $('#m55').text(monDay);
+	 for(var i=1;i<=monDay;i++){
+	     //var is = i-1;
+	     var monlx2  = (count-monbj2*i)*monlv;//月供利息(万元)
+	     var monlx2s  = monlx2*10000;//月供利息(元)
+		 var monbj2s= monbj2*10000; //月供本金（元）
+		 var aa = 1-(i-1)/2/monDay;
+		  var no_give2 = count+count*monlv*(monDay+1)/2-count*i/monDay-count*monlv*i*aa;//剩余还款
+		  var no_give2s =no_give2*10000;
+	    $('#mytable2').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbj2s.toFixed(2)+'</td><td width="25%">'+monlx2s.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give2s.toFixed(2)+'</td></tr> ');
+	 }
+})
+
+$('.detitlep').click(function(){
+     var f = $(this).next('.detitles').is(":visible");
+	 if(f==false){
+		  $(this).next('.detitles').slideDown();
+		  $(this).children('span').css('background-image','url(images/icon_up.png)');
+	 }else{
+		  $(this).next('.detitles').slideUp();
+		  $(this).children('span').css('background-image','url(images/icon_down.png)');
+	 }
+})
+</script>
+</body>
+</html>

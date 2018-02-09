@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>平安普惠移动官网_银行小额无抵押贷款</title>
+    <meta name="keywords" content="平安普惠,小额贷款,银行贷款,无抵押贷款,个人贷款,信用贷款,手机贷款">
+    <meta name="description" content="平安普惠整合了平安直通贷款、陆金所P2P小额信贷、平安易贷三个产品,致力于为个人、企业提供银行小额无抵押贷款">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/idai_details.css"/>
+	<script src="js/jquery.js"></script>
+    
+</head>
+<body style="background-color:#efeff4;">
+<script type="text/javascript">
+//页面加载完成之后去掉Loading
+$(document).ready(function(){
+   queryHintCallback("loadingBox");
+});
+</script>
+<div id="loadingBox"><img src="images/loading.gif"></div> 
+
+  <div class="wrapper">
+     <section class="business_tit">
+	    <a class="business_goback"></a>
+        <p class="tc business_txt">贷款攻略</p>
+        <a href="https://m.ph.com.cn/m/index.html" class="backsy-icon"></a>
+    </section>
+       <!--下载头部-->
+       <section class="top-down">
+           <div class="gb_down fl" onClick="document.querySelector('.top-down').style.display='none',document.querySelector('.ph_logo').style.top='0'"></div>
+           <div class="pa_logo fl"></div>
+           <div class="apptits fl">打造客户首选消费金融APP</div>
+           <a href="https://m.ph.com.cn/m/app/download/index1.html" class="newdownapp-btn fr tc">立即下载</a>
+       </section>
+   <section class="problem_tab">
+    <div class="tab_btn clearfix">
+     <ul>
+       <li class="currentstyle" id="tab1" onClick="setTab1('tab', 1, 3)">热门问题</li>
+       <li id="tab2" onClick="setTab1('tab', 2, 3)">借款相关</li>
+       <li id="tab3" onClick="setTab1('tab', 3, 3)">还款相关</li>
+     </ul>
+    </div>
+    <div class="hotproblem_box" id="con_tab_1">
+      <ul>
+        <li>
+         <p class="pbm">i贷费用是怎么计算的？<span></span></p>
+         <div class="answerbox">按照实际借款天数计息。每日费用=剩余未还本金*日费率。例如：您的日费率为0.05%，您借款10000元，第一期，每天费用5元=（10000*0.05%）；
+当您偿还500元本金后，每天费用=4.75元（9500*0.05%），以此类推。</div>
+        </li>
+        <li>
+         <p class="pbm">i贷的借款期限是多长？<span></span></p>
+         <div class="answerbox">借款期限将在您申请借款的时候进行约定，您可通过APP查看目前所支持的借款期限,您可随时选择提前还款，不额外收取任何费用。</div>
+        </li>
+        <li>
+         <p class="pbm">申请过程需要注意些什么？<span></span></p>
+         <div class="answerbox">
+          <p>亲，申请i贷有“三本人”原则，为了保证贷款申请顺利进行，请您务必遵循：</p>
+          <p>- 本人申请（我们有人脸识别）</p>
+          <p>- 绑定本人银行卡</p>
+          <p>- 使用本人身份证办理的手机号</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">有哪些还款方式？<span></span></p>
+         <div class="answerbox">
+         <p>我们支持壹钱包/银行储蓄卡自动还款和手动还款</p>
+         <p>自动还款：每月的固定还款日，会自动从您的壹钱包/银行储蓄卡扣款。</p>
+         <p>手动还款：您可以随时通过平安普惠APP主动还款，我们会按贷款余额和实际天数计算您的应还金额。</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">什么时候算逾期？<span></span></p>
+         <div class="answerbox">每月固定还款日没有还足当期应还金额的，还款日次日就算逾期并上报人行征信系统，请珍惜您的信用记录，及时还款。</div>
+        </li>
+      </ul>
+    </div>
+    <div class="jkproblem_box" style="display:none" id="con_tab_2">
+      <ul>
+        <li>
+         <p class="pbm">申请i贷，我能得到多少额度？<span></span></p>
+         <div class="answerbox">额度为2,000 - 30,000元，该额度由您的信用状况等综合决定。申请流程全线上，最快3分钟放款！此类推。</div>
+        </li>
+        <li>
+         <p class="pbm">i贷费用是怎么计算的？<span></span></p>
+         <div class="answerbox">按照实际借款天数计息。每日费用=剩余未还本金*日费率。例如：您的日费率为0.05%，您借款10000元，第一期，每天费用5元=（10000*0.05%）；
+当您偿还500元本金后，每天费用=4.75元（9500*0.05%），以此类推。</div>
+        </li>
+        <li>
+         <p class="pbm">i贷的借款期限是多长？<span></span></p>
+         <div class="answerbox">借款期限将在您申请借款的时候进行约定，您可通过APP查看目前所支持的借款期限,您可随时选择提前还款，不额外收取任何费用。</div>
+        </li>
+        <li>
+         <p class="pbm">申请过程需要注意些什么？<span></span></p>
+         <div class="answerbox">
+          <p>亲，申请i贷有“三本人”原则，为了保证贷款申请顺利进行，请您务必遵循：</p>
+          <p>- 本人申请（我们有人脸识别）</p>
+          <p>- 绑定本人银行卡</p>
+          <p>- 使用本人身份证办理的手机号</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">提现和还卡有什么区别？<span></span></p>
+         <div class="answerbox">
+         <p>提现是指将借款金额放款到您的储蓄卡账户，您可直接通过银行卡或取出现金后进行消费。</p>
+         <p>还卡是指将借款金额放款到您的信用卡账户，您可通过信用卡进行消费。</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">提现和还卡的利率一样吗？<span></span></p>
+         <div class="answerbox">
+           <p>提现和还卡的利率是不一样的</p>
+           <p>提现的日费率为0.05%-0.1%，我们会根据您的信用情况确定您的费率</p>
+           <p>还卡的日费率为0.042%</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">绑定的银行卡是否有限制？<span></span></p>
+         <div class="answerbox">有，您所绑定的本人银行卡的预留号码必须要与您实名注册的手机号一致。若您绑定失败，请更换银行卡再次尝试。</div>
+        </li>
+        <li>
+         <p class="pbm">为什么抢不到额度？<span></span></p>
+         <div class="answerbox">平安i贷全程在线申请，每日额度有限，先抢先得。您可在微信公众号中搜索并关注“平安普惠”，了解更多活动消息。</div>
+        </li>
+      </ul>
+    
+    </div>
+    <div class="hkproblem_box" style="display:none" id="con_tab_3">
+      <ul>
+        <li>
+         <p class="pbm">有多笔借款的话怎么还款？<span></span></p>
+         <div class="answerbox">为了方便您的还款，我们会将您的多笔借款统一成同一还款日。</div>
+        </li>
+        <li>
+         <p class="pbm">有哪些还款方式？<span></span></p>
+         <div class="answerbox">
+         <p>我们支持壹钱包/银行储蓄卡自动还款和手动还款</p>
+         <p>自动还款：每月的固定还款日，会自动从您的壹钱包/银行储蓄卡扣款。</p>
+         <p>手动还款：您可以随时通过平安普惠APP主动还款，我们会按贷款余额和实际天数计算您的应还金额。</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">如何手动还款/自动还款？<span></span></p>
+         <div class="answerbox">
+           <p>1、手动还款</p>
+           <p>在i贷产品页面点击【立即还款】→选择需要还款的借款→选择还款银行卡→输入还款金额→点击【确认】→出现成功提示页面，完成主动还款。</p>
+           <p>2、自动还款</p>
+           <p>您在首次动用时选择的放款账户（壹钱包/储蓄卡）即为默认扣款账户，请您在每月的到期还款日前在该账户存入足量金额（不少于当期应还金额），我们会在到期还款日进行自动扣款。</p>
+         </div>
+        </li>
+        <li>
+         <p class="pbm">什么时候算逾期？<span></span></p>
+         <div class="answerbox">每月固定还款日没有还足当期应还金额的，还款日次日就算逾期并上报人行征信系统，请珍惜您的信用记录，及时还款。</div>
+        </li>
+        <li>
+         <p class="pbm">逾期后的罚息为多少？<span></span></p>
+         <div class="answerbox">逾期后的罚息金额将在您签约时的借款协议中进行约定，您可查看相关的借款协议。</div>
+        </li>
+        <li>
+         <p class="pbm">还款时绑定的银行卡遗失，如何处理？<span></span></p>
+         <div class="answerbox">如果您的卡片遗失/挂失/冻结了，您需要在“还款方式”界面绑定一张新的银行卡进行扣款。如你上次的自动扣款失败，您需要手动还款。</div>
+        </li>
+        <li>
+         <p class="pbm">是否可以申请调整固定还款日？<span></span></p>
+         <div class="answerbox">暂时不支持固定还款日调整。</div>
+        </li>
+      </ul>
+    
+    </div>
+   </section>
+
+
+
+
+   
+
+
+<!--  <div class="sqidai_btn">
+    <a href="https://m.ph.com.cn/m/daikuan/iloan/2.0/index.html">我要申请</a>
+  </div>
+-->  
+  
+  
+  <section class="idai-nav">
+       <div class="idai-navin clearfix">
+        <div>
+         <a href="idai_details.html">
+           <i class="icon5"></i>
+           <span>介绍</span>
+         </a>
+        </div>
+        <div>
+         <a href="idai_xunhuandai.html">
+           <i class="icon6"></i>
+           <span>循环贷</span>
+         </a>
+         </div>
+         <div>
+         <a href="idai_friend.html">
+           <i class="icon7"></i>
+           <span>邀好友</span>
+         </a>
+         </div>
+         <div class="idactive">
+         <a href="idai_problem.html" class="color1">
+           <i class="icon8"></i>
+           <span>攻略</span>
+         </a>
+         </div>
+       </div>
+    </section>
+  </div>
+
+    <a href="https://m.ph.com.cn/m/product/iloan/2.1/step1.html" class="idsq-btn"></a>
+
+</body>
+<script>
+$(function(){        
+      $('.pbm').click(function(){
+	     var f = $(this).siblings('.answerbox').is(':visible');
+	     if(f==false){
+			$(this).siblings('.answerbox').slideDown();
+			$(this).children('span').css('background-image','url(images/new_img/list_up.png)');
+		}else{
+		    $(this).siblings('.answerbox').slideUp();
+			$(this).children('span').css('background-image','url(images/new_img/list_down.png)');
+		}
+	 })
+});
+</script>
+</html>

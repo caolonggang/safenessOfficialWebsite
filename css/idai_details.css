@@ -1,0 +1,512 @@
+/*idai详情页*/
+.idai_xiaoxi
+{
+    width: 100%;
+    height: .7rem;
+    background-color: #fff;
+    line-height: .7rem;
+    color: #414141;
+}
+.tz_tit
+{
+    padding-left: 1rem;
+    font-size: .26rem;
+    color: #414141;
+    line-height: .7rem;
+}
+.marquee
+{
+    width: 4.5rem;
+    height: .7rem;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.marquee li
+{
+    position: absolute;
+    top: -999rem;
+    left: 0;
+    display: block;
+    white-space: nowrap;
+    font-size: .26rem;
+    color: #414141;
+    line-height: .7rem;
+}
+.tz_icon
+{
+    width: .44rem;
+    height: .3rem;
+    background: url(../images/new_img/tz_icon.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: .2rem;
+    left: .3rem;
+}
+.gbtz_icon
+{
+    width: .22rem;
+    height: .22rem;
+    background: url(../images/new_img/gbtz_icon.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: .25rem;
+    right: .3rem;
+}
+.idai_page1, .idai_page2, .idai_page3
+{
+    width: 100%;
+    background-color: #fff;
+    margin-top: .2rem;
+    padding: .3rem 0 .5rem .3rem;
+}
+.page1, .page2, .page3
+{
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+.page1 ul li
+{
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: .28rem;
+    color: #313131;
+}
+.page1 ul li span
+{
+    font-size: .32rem;
+    color: #fe563f;
+}
+.page1_icon1, .page1_icon2, .page1_icon3, .page1_icon4
+{
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin: .4rem auto;
+    background: url(../images/new_img/page1_icon1.png) no-repeat center center;
+    background-size: .5rem .5rem;
+}
+.page1_icon2
+{
+    background: url(../images/new_img/page1_icon2.png) no-repeat center center;
+    background-size: .5rem .5rem;
+}
+.page1_icon3
+{
+    background: url(../images/new_img/page1_icon3.png) no-repeat center center;
+    background-size: .5rem .5rem;
+}
+.page1_icon4
+{
+    background: url(../images/new_img/page1_icon4.png) no-repeat center center;
+    background-size: .5rem .5rem;
+}
+.ckyt
+{
+    width: 1.57rem;
+    height: .45rem;
+    background-color: #fe563f;
+    border-radius: .2rem;
+    display: block;
+    font-size: .24rem;
+    color: #fff;
+    text-align: center;
+    line-height: .45rem;
+    position: absolute;
+    top: .32rem;
+    right: .3rem;
+}
+.dashed
+{
+    width: 5.6rem;
+    height: 1px;
+    border: 1px dashed #ddd;
+    margin: .65rem auto;
+}
+.shuicon
+{
+    width: 6.9rem;
+    margin-top: -1.35rem;
+}
+.shuicon ul li
+{
+    width: 1.38rem;
+    float: left;
+    font-size: .24rem;
+    color: #414141;
+    text-align: center;
+}
+.shuicon ul li i
+{
+    width: .46rem;
+    height: .46rem;
+    border-radius: 50%;
+    border: 1px solid #fe563f;
+    line-height: .45rem;
+    font-size: .3rem;
+    color: #fe563f;
+    background-color: #fff;
+    text-indent: .12rem;
+    font-style: italic;
+    display: block;
+    margin: .45rem auto .3rem;
+    text-align: start;
+}
+.page3_content1, .page3_content2, .page3_content3, .page3_content4
+{
+    width: 100%;
+    background: url(../images/new_img/page3_icon1.png) no-repeat left .32rem;
+    background-size: 1rem;
+    padding: .32rem 0 .25rem 1.3rem;
+}
+.page3_content2
+{
+    background: url(../images/new_img/page3_icon2.png) no-repeat left .32rem;
+    background-size: 1rem;
+}
+.page3_content3
+{
+    background: url(../images/new_img/page3_icon3.png) no-repeat left .32rem;
+    background-size: 1rem;
+}
+.page3_content4
+{
+    background: url(../images/new_img/page3_icon4.png) no-repeat left .32rem;
+    background-size: 1rem;
+}
+.p_style
+{
+    font-size: .3rem;
+    color: #171717;
+}
+.p_style1
+{
+    font-size: .24rem;
+    color: #666;
+}
+.problem_tab
+{
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 1.1rem;
+}
+.tab_btn
+{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+.tab_btn ul li
+{
+    width: 33.33%;
+    height: .9rem;
+    float: left;
+    font-size: .28rem;
+    color: #313131;
+    text-align: center;
+    line-height: .9rem;
+}
+.currentstyle
+{
+    border-bottom: 2px solid #fe563f;
+    color: #fe563f;
+}
+.pbm
+{
+    width: 100%;
+    height: 1.09rem;
+    border-bottom: 1px solid #ddd;
+    line-height: 1.09rem;
+    font-size: .28rem;
+    color: #171717;
+    padding: 0 .3rem;
+}
+
+.answerbox
+{
+    width: 100%;
+    background-color: #efeff4;
+    color: #171717;
+    font-size: .26rem;
+    padding: .3rem;
+    display: none;
+}
+
+.pbm span
+{
+    float: right;
+    display: block;
+    width: 0.27rem;
+    height: 1rem;
+    background: url(../images/new_img/list_down.png) no-repeat center;
+    background-size: 100%;
+}
+
+.sqidai_btn
+{
+    width: 100%;
+    height: 1rem;
+    background-color: #fe563f;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    line-height: 1rem;
+    text-align: center;
+}
+.sqidai_btn a
+{
+    font-size: .36rem;
+    color: #fff;
+}
+
+
+
+
+
+/*邀请好友*/
+.gzwx-hd
+{
+    width: 100%;
+    height: 1.35rem;
+}
+.gzwx-bd
+{
+    width: 100%;
+    background-color: #fff;
+    padding: .56rem 0 .2rem .3rem;
+}
+.gzwx-step
+{
+    margin-bottom: .6rem;
+}
+.gzwx-tit
+{
+    width: 100%;
+    height: .52rem;
+}
+
+.step1-icon, .step1-icon1, .step1-icon2, .step1-icon3, .step1-icon4
+{
+    width: 1.3rem;
+    height: .52rem;
+    background: url(../images/step1.png) no-repeat;
+    display: block;
+    background-size: 100%;
+}
+.step1-icon1
+{
+    background: url(../images/step2.png) no-repeat;
+    background-size: 100%;
+}
+.step1-icon2
+{
+    background: url(../images/step3.png) no-repeat;
+    background-size: 100%;
+}
+.step1-icon3
+{
+    background: url(../images/step4.png) no-repeat;
+    background-size: 100%;
+}
+.step1-icon4
+{
+    background: url(../images/step5.png) no-repeat;
+    background-size: 100%;
+}
+.step1-img
+{
+    width: 3.52rem;
+    margin: .3rem auto 0;
+}
+.step-tit
+{
+    height: .52rem;
+    line-height: .6rem;
+    font-size: .36rem;
+    margin-left: 0.1rem;
+}
+.cl1
+{
+    color: #f7593b;
+}
+.friend_step
+{
+    width: 100%;
+    background-color: #fff;
+    padding: .56rem 0 .2rem .3rem;
+}
+
+/*循环贷*/
+.xunhuandai-top
+{
+    width: 100%;
+    background-color: #fff;
+    padding: .43rem 0 .2rem;
+}
+.xhdimg
+{
+    width: 4.73rem;
+    height: .71rem;
+    background: url(../images/new_img/xhdimg.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    font-size: .32rem;
+    color: #fff;
+    line-height: .6rem;
+    margin: 0 auto;
+}
+.swiper-slide p
+{
+    font-size: .24rem;
+    color: #666;
+}
+.swiper-slide p span
+{
+    font-size: .36rem;
+    color: #666;
+}
+.imgbox img
+{
+    margin: 0 auto;
+}
+
+.xhd_downimg
+{
+    width: .66rem;
+    height: .3rem;
+    background: url(../images/new_img/xhd_down.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin: .6rem auto 0;
+}
+
+/*申请idaibtn*/
+.idsq-btn
+{
+    width: .9rem;
+    height: .9rem;
+    background: url(../images/new_img/idsq_btn.png) no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 1.2rem;
+    right: .3rem;
+    border-radius: 50%;
+    z-index: 3;
+}
+/*返回首页icon*/
+.backsy-icon
+{
+    width: .4rem;
+    height: .4rem;
+    background: url(../images/new_img/backsy.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: .35rem;
+    top: .23rem;
+}
+
+/*----循环贷页面4/17----*/
+.page-top
+{
+    width: 100%;
+    height: 0.81rem;
+    margin: 0.3rem 0 0 0;
+    background: url(../images/new_img/xhd-topbg.png) center no-repeat;
+    background-size: 6.86rem;
+}
+.step-four
+{
+    position: relative;
+    width: 100%;
+    float: left;
+    z-index: 1;
+}
+.step-four .line
+{
+    position: absolute;
+    width: 2px;
+    height: 15rem;
+    z-index: 1;
+    top: 0;
+    left: 0.72rem;
+    border-left: 2px dashed #ff563f;
+}
+.step-four ul
+{
+    position: relative;
+    z-index: 2;
+    float: left;
+    margin-bottom: 2.2rem;
+    width: 100%;
+}
+.step-four ul li
+{
+    width: 100%;
+    height: 4.8rem;
+    float: left;
+    position: relative;
+}
+.step-four ul li i
+{
+    float: left;
+    margin: 0.68rem 0 0 0.34rem;
+    width: 1.02rem;
+    height: 0.64rem;
+}
+.step-four ul li i.i1
+{
+    background: url(../images/new_img/xhd-step1.png) center no-repeat #ffffff;
+    background-size: 100%;
+}
+.step-four ul li i.i2
+{
+    background: url(../images/new_img/xhd-step2.png) center no-repeat #ffffff;
+    background-size: 100%;
+}
+.step-four ul li i.i3
+{
+    background: url(../images/new_img/xhd-step3.png) center no-repeat #ffffff;
+    background-size: 100%;
+}
+.step-four ul li i.i4
+{
+    background: url(../images/new_img/xhd-step4.png) center no-repeat #ffffff;
+    background-size: 100%;
+}
+.step-four ul li p
+{
+    float: left;
+    height: 1.2rem;
+    margin: 0.4rem 0 0.3rem 0.2rem;
+    color: #666666;
+    font-size: 0.32rem;
+    display: inline-block;
+    line-height: 0.6rem;
+}
+.step-four ul li p.hig
+{
+    line-height: 1.2rem;
+}
+.step-four ul li img
+{
+    width: 5.08rem;
+    height: 2.76rem;
+    margin-left: 1.56rem;
+    -webkit-box-shadow: 4px 4px 20px #ffdcc6;
+    -moz-box-shadow: 4px 4px 20px #ffdcc6;
+    box-shadow: 4px 4px 20px #ffdcc6;
+}
+.step-four ul li img.aboimg
+{
+    position: absolute;
+    z-index: 2;
+    left: 3.4rem;
+    bottom: -0.36rem;
+    width: 1.8rem;
+    height: 1.64rem;
+    margin-left: 0rem;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}

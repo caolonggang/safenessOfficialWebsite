@@ -1,0 +1,94 @@
+.gzwx-hd{
+    width:100%;
+	height:1.35rem;
+
+}
+.gzwx-bd{
+	width:100%;
+	background-color:#fff;
+	padding:.56rem 0 .2rem .3rem;
+}
+.gzwx-step{
+	margin-bottom:.6rem;
+	}
+.gzwx-tit{
+	width:100%;
+	height:.52rem;
+}
+
+.step1-icon,.step1-icon1,.step1-icon2,.step1-icon3,.step1-icon4{
+	width:1.3rem;
+	height:.52rem;
+	background:url(../images/step1.png) no-repeat;
+	display:block;
+	background-size:100%;
+}
+.step1-icon1{
+	background:url(../images/step2.png) no-repeat;
+	background-size:100%;
+	}
+.step1-icon2{
+	background:url(../images/step3.png) no-repeat;
+	background-size:100%;
+	}
+.step1-icon3{
+	background:url(../images/step4.png) no-repeat;
+	background-size:100%;
+	}
+.step1-icon4{
+	background:url(../images/step5.png) no-repeat;
+	background-size:100%;
+	}
+.step-tit{
+	height:.52rem;
+	line-height:.6rem;
+	font-size:.36rem;
+    margin-left:0.1rem;
+}
+.cl1{
+	color:#f7593b;
+}
+.step1-img,.step1-img1{
+	width:5.21rem;
+	margin:.38rem 0 0 .8rem;
+	}
+.step1-img1{
+	width:5.78rem;
+}
+.step1-text{
+	height:.52rem;
+	width:5.21rem;
+	margin:.2rem auto 0;
+	
+}
+.huo{
+	width:.52rem;
+	height:.52rem;
+	border-radius:.2rem;
+	line-height:.52rem;
+	background-color:#ffeb65;
+	display:block;
+	font-size:0.3rem;
+	text-align:center;
+	margin-right:.2rem;
+}
+.erweima{
+    width:100%;
+	background-color:#efeff4;	
+}
+.erweima-title{
+	width:3.44rem;
+	height:0.52rem;
+	background-color:#28d962;
+	margin:0 auto;
+	line-height:0.52rem;
+	text-align:center;
+	color:#fff;
+	font-size:.3rem;
+	border-bottom-left-radius:.1rem;
+	border-bottom-right-radius:.1rem;
+}
+.erweima-img{
+	width:3.44rem;
+	margin:.3rem auto;
+}

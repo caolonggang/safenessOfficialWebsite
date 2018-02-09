@@ -1,0 +1,15 @@
+/*分类*/
+.classification_top{height:0.64rem;line-height:0.64rem;background:#efeff4;color:#666666;border-bottom:1px solid #d9d9d9;}
+.class_dkcp{/*border-top:1px solid #d9d9d9; */background:#fff}
+.class_dkcp .dkcp_ul{}
+.class_dkcp .dkcp_ul li{float:left;width:33.3%;height:2.5rem;border:1px solid #d9d9d9;border-left:0;border-top:0;}
+ .class_dkcp .dkcp_ul li:nth-child(3n){border-right:0;} 
+.class_dkcp .dkcp_ul li a .p1{width:0.64rem;height:0.64rem;margin:0.5rem auto 0.2rem}
+.class_dkcp .dkcp_ul li a .p1 img{width:0.64rem;height:0.64rem}
+.class_dkcp .abouts li a .p1 img{width:0.5rem !important;height:0.5rem !important;}
+.class_dkcp .dkcp_ul li a .p2{font-size:0.26rem;color:#666;}
+.class_dkcp .dkcp_ul li a .p3{font-size:0.22rem;color:#ffae2b;padding-top:0.1rem}
+	
+	
+	
+	

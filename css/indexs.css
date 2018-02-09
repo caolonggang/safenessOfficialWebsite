@@ -1,0 +1,226 @@
+﻿/*全局样式 */ 
+@charset "UTF-8";
+html { font-size: 10px; }
+* {margin: 0;padding: 0; transform: translate3d(0, 0, 0);-webkit-transform: translate3d(0, 0, 0); }
+* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; }
+html, body {-ms-touch-action: none;overflow: auto; }
+html, body {width: 100%;height: 100%;overflow: hidden;}
+body {-webkit-overflow-scrolling: touch; }
+.fl {float: left;}
+.top-down {width: 100%;height: 1.05rem;background-color: #000;line-height: 1.05rem;position: relative;z-index: 1001;}
+body {font-size: 14px;line-height: 1.5;}
+.fr {float: right;}
+.page-wrap {width: 100%;height: 100%;}
+.page {width: 100%;height: 100%;-webkit-backface-visibility: hidden;-webkit-perspective: 1000px;}
+body{background: url(../images/bg.png) center center no-repeat;background-size: cover; }
+
+
+/*顶部*/
+.wrapper{ position:fixed; z-index:9999; width: 100%; max-width: 750px; margin: 0 auto; background-color: #efeff4;}
+.top-down{ width: 100%;height: 1.05rem; background-color: #000; line-height: 1.05rem; position: relative;z-index: 1001;}
+.gb_down{width: .78rem; height: 1.05rem;background: url(../images/new_img/gb_down.png) no-repeat center center; background-size: .27rem .27rem;}
+.asa{text-decoration: none;}
+.pa_logo{ width: .8rem;height: 1.05rem;background: url(../images/new_img/pa_logo.png) no-repeat center center;background-size: .76rem .76rem;}
+.apptits{font-size: .28rem;height: 1.05rem;color: #fff;padding-left: .25rem;position: absolute;top: 0; left: 1.5rem;}
+.newdownapp-btn{width: 2rem;height: 1.05rem;line-height: 1.05rem; background-color: #e14020;display: block;color: #fff;font-size: .34rem;}
+
+/*content*/
+.container {position: relative;max-width: 750px;height: 100%;margin: 0 auto;-webkit-overflow-scrolling: touch;overflow: hidden; }
+.container svg path,
+.container svg rect {fill: #db9c58; }
+.container .page-wrap {background: #000000; }
+.container .page-wrap .page1 {background: url(../images/bg.png) center center no-repeat;background-size: cover; }
+.container .page-wrap .page1 .title p {vertical-align: middle;font-size: 11px; }
+.container .page-wrap .page1 .title p span {background-size: 100%;width: 12px;height: 12px;vertical-align: middle;display: inline-block;background-repeat: no-repeat; }
+.container .page-wrap .page1 .title p img {width: 303px;height: 151px; }
+.container .page-wrap .page1 .title .hdsmBtn {z-index: 99;position: absolute;margin-bottom: 10px;width: 100%;text-align: center; }
+.container .page-wrap .page1 .money {background-size: 100% 100%;width: 32.5px;height: 36px;position: absolute;right: 10px;top: 9rem; }
+.container .page-wrap .page1 .center {position: relative;text-align: center;height: auto;margin: 70px auto 60px;z-index: -1; }
+		  
+
+
+.container .page-wrap .page1 .center .circle {display: block;position: relative;top: -1px;margin: 0 auto;width: 206px;height: 212px;
+                                              background: url("../images/jdCoin-circle33.png") 0 0;background-size: 100% 100%;}
+.container .page-wrap .page1 .center .circle1 {display: block;position: relative;top:-73px;margin: 0 auto;width: 376px;height: 329px;background: url("../images/cbj.png") 0 0;
+                                              background-size: 100% 100%;}
+.container .page-wrap .page1 .center .hand {position: absolute;}
+
+.container .page-wrap .page1 .center .hand .finger_circle {background-color: rgba(255, 244, 219, 0.5);border-radius: 50%;width: 1rem;height: 1rem;position: absolute;
+                                                          right: 52%;top: 14%;-webkit-animation: water 0.3s infinite ease-in;animation: water 0.3s infinite ease-in; }
+
+.container .page-wrap .page1 .center .hand .finger {background-size: 100%;width: 6.35rem;height: 7rem;-webkit-animation: finger 0.3s ease-in alternate infinite;
+                           animation: finger 0.3s ease-in alternate infinite; }
+
+.container .page-wrap .page1 .center .launch {background: url("../images/light.png") center center no-repeat;background-size: 100%;width: 262px;
+                                   height: 262px;left: 50%;margin-left: -132px;position: absolute;top: -8px;-webkit-animation: scale 2s ease-in alternate infinite;
+								   animation: scale 2s ease-in alternate infinite;}
+
+.container .page-wrap .page1 .center .plan {position: absolute;background: url("../images/planeCircle.png") center center no-repeat;background-size: 100%;width: 323.5px;
+                                       height: 323.5px;left: 50%;margin-left: -162.7px;top: -44px;-webkit-animation: sate 10s linear infinite;-webkit-transform-origin: 50% 50%;
+									   animation: sate 10s linear infinite;transform-origin: 50% 50%;}
+
+.container .page-wrap .page1 .center .earth {position: absolute;background: url("../images/earthCircle.png") center center no-repeat;background-size: 100%;width: 275px;
+                                                height: 275.5px;left: 50%;margin-left: -138.5px;top: -20px;-webkit-animation: sate 15s linear infinite;-webkit-transform-origin: 50% 50%;
+												animation: sate 15s linear infinite;transform-origin: 50% 50%;}
+
+.container .page-wrap .page1 .center .light {position: absolute;background: url("../images/lightCircle.png") center center no-repeat;background-size: 100%;width: 224px;
+                                           height: 224.5px;left: 50%;margin-left: -112.5px;top: 8px;-webkit-animation: sate 4s linear infinite;-webkit-transform-origin: 50% 50%;
+										   animation: sate 4s linear infinite;transform-origin: 50% 50%;}
+	  
+.container .page-wrap .page1 .center .wave{ background: url("../images/wave1.png") center center no-repeat;background-size: 100%; width: 225px;height: 236px;
+                                   left: 50%; margin-left: -112.5px; position: absolute; }
+.container .page-wrap .page1 .center .wave1 { -webkit-animation: water 2.4s infinite ease-in-out; animation: water 2.4s infinite ease-in-out; }
+.container .page-wrap .page1 .center .wave2 { -webkit-animation: water 2.4s 0.5s infinite ease-in-out;animation: water 2.4s 0.5s infinite ease-in-out; }
+.container .page-wrap .page1 .center .wave3 {-webkit-animation: water 2.4s 1s infinite ease-in-out;animation: water 2.4s 1s infinite ease-in-out; }
+			
+			
+.container .page-wrap .page2{background: url(../images/bg.png) center center no-repeat;background-size: cover;overflow: hidden; }
+.container .page-wrap .page3 { background: url(../images/bg.png) center center no-repeat;background-size: cover; overflow: hidden; }
+.container .page-wrap .page4 { background: url(../images/bg.png) center center no-repeat; background-size: cover;overflow: hidden; }
+.container .page-wrap .title {color: #ffd895;font-size: 2.8rem; text-align: center; }
+	  
+	  
+	  
+.container .page-wrap .titles { margin-left:0.5rem; width: 68px;margin-top:1rem;}	  
+.container .page-wrap .titles p img{width: 100%;}
+.container .page-wrap .titles img{width: 100%;}
+
+.c-pic2{ text-align:center; width:100%; padding-top:1rem;}
+.c-pic2 img{ width:81%;}
+.c-pic3{ text-align:center; width:100%; padding-top:2rem;}
+.c-pic3 img{ width:81%;}
+.c-pic4{ text-align:center; width:100%; padding-top:2rem;}
+.c-pic4 img{ width:81%;}
+
+
+.arrow{position: absolute;left: 50%;bottom: 43px;width: 27px;height: 30px;margin-left: -13px;background: url(../images/arrow.png) no-repeat;background-size: 100%;opacity: 0;}
+.current .arrow {-webkit-animation: top 2s infinite ease-in-out;animation: top 2s infinite ease-in-out;}
+
+
+
+
+/*制定宽度*/
+@media screen and (min-width: 320px) {
+html {font-size: 8.53px; }
+.main {zoom: 0.85; } }
+@media screen and (min-width: 375px) {
+html {font-size: 10px; }
+.main {zoom: 1; } }
+@media screen and (min-width: 414px) {
+html {font-size: 11.04px; }
+.main {zoom: 1.1;}}
+@media screen and (max-height: 480px) {
+html {font-size: 8.53px; }
+.main {zoom: 0.85; } }
+@media screen and (max-height: 480px) {
+html {font-size: 8.53px; }
+.main {zoom: 0.7; }
+.buschild {height: 9rem !important;padding-top: 1.5rem !important; }
+.content {margin-top: 0; } }
+@media screen and (width: 320px) and (height: 480px){
+.c-pic2{ padding-top:0rem;}
+.c-pic3{ padding-top:0.5rem;}
+.c-pic4{ padding-top:0.5rem;}
+.container .page-wrap .page1 .center .hand {position: absolute; width:100%; text-align:center;}
+.container .page-wrap .page1 .center .circle1 {display: block;position: relative; top:-88px; margin:0 auto; width:87%; height:355px;background:url("../images/cbj.png") 0 0; background-size: 100% 100%;}
+.container .page-wrap .page1 .title p img { width: 368px;height: 183px;}
+}
+@media screen and (min-width: 415px){
+.container .page-wrap .page1 .center .circle1{ display:none;}
+}
+@media screen and (width: 400px) and (height: 700px){
+.container .page-wrap .page1 .center .circle1 { display:none;}
+}
+	
+	
+
+
+/*动画*/
+@keyframes sate {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes sate {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.8); } }
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.8); } }
+@keyframes water {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(2, 2, 2);
+    -moz-transform: scale3d(2, 2, 2);
+    -ms-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2); } }
+@-webkit-keyframes water {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(2, 2, 2);
+    -moz-transform: scale3d(2, 2, 2);
+    -ms-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2); } }
+	
+	
+@keyframes top {
+    0%,20% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,10px,0);
+        transform: translate3d(0,10px,0)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-8px,0);
+        transform: translate3d(0,-8px,0)
+    }
+}
+@-webkit-keyframes top {
+    0%,20% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,10px,0);
+        transform: translate3d(0,10px,0)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-8px,0);
+        transform: translate3d(0,-8px,0)
+    }
+}
+
+

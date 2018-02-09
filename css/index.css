@@ -1,0 +1,363 @@
+@charset "utf-8";
+/*新官网改版*/
+.idai-box{
+	width:100%;
+	background-color:#fff;
+	position:relative;
+	}
+.idai-text{
+	padding:.2rem 0 .28rem .3rem;
+	height:1.88rem;
+	}
+.idai-text p:first-child{
+	font-size:.32rem;
+	color:#1f221f;
+	}
+.idai-text p:last-child{
+	font-size:.24rem;
+	color:#8e8e8e;
+	margin-top:.1rem;
+	}
+.idai-img{
+	width:1.99rem;
+	height:1.38rem;
+	position:absolute;
+	top:.4rem;
+	right:.3rem;
+	}
+.n-hot-product{
+	width:100%;
+	
+	background-color:#fff;
+	margin-top:.2rem;
+	padding:.3rem 0 .3rem .3rem;
+	}
+
+.n-hot-product h2 span{
+	font-size:.26rem;
+	color:#fb5355;
+	font-weight:bold;
+	margin-left:.2rem;
+	}
+.swiper-container1{width:100%;height:3.35rem;overflow:hidden;}
+.swiper-container2{width:100%;height:3.21rem;overflow:hidden;}
+.swiper-container1 .swiper-wrapper .product-in{
+	width:5.02rem;
+	height:3.35rem;
+	float:left;
+	background-size:100% 100%;
+	border-radius:.1rem;
+	border:1px solid #e6e6ea;
+	}
+
+.swiper-container1 .swiper-wrapper .product-in1{
+	width:1.75rem;
+	height:3.35rem;
+	float:left;
+	background:url(../images/new_img/product_bg1.png) no-repeat;
+	background-size:100% 100%;
+	border-radius:.1rem;
+	}
+.swiper-wrapper a{
+	display:block;
+	width:100%;
+	height:100%;
+	}
+.product-name{
+	height:1.06rem;
+	line-height:1.3rem;
+	font-size:.36rem;
+	color:#171717;
+	background-size:.28rem .31rem;
+	}
+.idai3icon{
+	padding-left:1.15rem;
+	}
+.idailogo,.o2ologo{
+	width:.6rem;
+	height:.6rem;
+	background:url(../images/new_img/idailogo.png) no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:.35rem;
+	left:.23rem;
+	}
+.o2ologo{
+	background:url(../images/new_img/o2ologo.png) no-repeat;
+	background-size:100%;
+	}
+.idai3icon span{
+	display:block;
+	float:left;
+	width:.7rem;
+	height:.3rem;
+	line-height:.3rem;
+	text-align:center;
+	color:#6abdff;
+	border:1px solid #6abdff;
+	border-radius:2px;
+	margin-right:.32rem;
+	font-size:.2rem;
+	}
+.idai3icon1{
+	padding-left:.65rem;
+	}
+.idai3icon1 span{
+	display:block;
+	float:left;
+	width:1rem;
+	height:.3rem;
+	line-height:.3rem;
+	text-align:center;
+	color:#6abdff;
+	border:1px solid #6abdff;
+	border-radius:2px;
+	margin-right:.32rem;
+	font-size:.2rem;
+	}	
+.product-in1 a.lookmore{
+	font-size:.26rem;
+	color:#aaa9a9;
+	line-height:5.3rem;
+	}
+.toolbar{
+	width:100%;
+	height:1.9rem;
+	background-color:#fff;
+	margin-top:.2rem;
+	}
+.toolbar a{
+	width:20%;
+	height:1.28rem;
+	float:left;
+	text-align:center;
+	line-height:2.8rem;
+	color:#666666;
+	font-size:.22rem;
+	}
+.toolbar a:nth-child(1){
+	background:url(../images/new_img/toolbar_icon1.png) no-repeat center center;
+	background-size:.56rem .56rem;
+	}
+.toolbar a:nth-child(2){
+	background:url(../images/new_img/toolbar_icon2.png) no-repeat center center;
+	background-size:.56rem .56rem;
+	}
+.toolbar a:nth-child(3){
+	background:url(../images/new_img/toolbar_icon3.png) no-repeat center center;
+	background-size:.53rem .58rem;
+	}
+.toolbar a:nth-child(4){
+	background:url(../images/new_img/toolbar_icon4.png) no-repeat center center;
+	background-size:.56rem .56rem;
+	}
+.toolbar a:nth-child(5){
+	background:url(../images/new_img/toolbar_icon5.png) no-repeat center center;
+	background-size:.56rem .58rem;
+	}
+.newhot-hd{
+	width:100%;
+	background-color:#fff;
+	margin-top:.2rem;
+	padding:.32rem 0 .22rem .3rem;
+	}
+.swiper-container2 .swiper-wrapper .newhot-hd-in1{
+    width:2.5rem;
+	height:3rem;
+	float:left;
+	background:url(../images/new_img/idai_bg.png) no-repeat;
+	background-size:100% 100%;
+
+	}
+.swiper-container2 .swiper-wrapper .newhot-hd-in2{
+    width:2.5rem;
+	height:3rem;
+	float:left;
+	background:url(../images/new_img/o2o_bg.png) no-repeat;
+	background-size:100% 100%;
+	}
+.swiper-container2 .swiper-wrapper .newhot-hd-in3{
+    width:2.5rem;
+	height:3rem;
+	float:left;
+	background:url(../images/new_img/wdy_bg.png) no-repeat;
+	background-size:100% 100%;
+
+	}
+.swiper-container2  p{
+	color:#fff;
+	text-align:center;
+	}
+.newhot-hd-in1 p:nth-child(1){
+	font-size:.3rem;
+	padding-top:1.55rem;
+	}
+.newhot-hd-in1 p:nth-child(2){
+	font-size:.2rem;
+	padding-top:.05rem;
+	}
+.newhot-hd-in1 p:nth-child(3){
+	font-size:.2rem;
+	padding-top:.05rem;
+	}
+.newhot-hd-in2 p:nth-child(1){
+	font-size:.3rem;
+	padding-top:1.55rem;
+	}
+.newhot-hd-in2 p:nth-child(2){
+	font-size:.2rem;
+	padding-top:.2rem;
+	}
+.newhot-hd-in3 p:nth-child(1){
+	font-size:.3rem;
+	padding-top:1.55rem;
+	}
+.newhot-hd-in3 p:nth-child(2){
+	font-size:.2rem;
+	padding-top:.2rem;
+	}
+.news-content,.aboutus-content{
+	width:100%;
+	background-color:#fff;
+	padding:.26rem .3rem;
+	margin-top:.2rem;
+	}
+.news-content{
+	padding:.26rem .3rem 0;
+	}
+.news-list,.aboutus-bd{
+	width:4.82rem;
+	}
+.news-title{
+	font-size:.26rem;
+	color:#666;
+	}
+.news-title li{
+	width:4.82rem;
+	height:.95rem;
+	line-height:.95rem;
+	border-bottom:1px solid #eee;
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position:relative;
+	padding-left:.25rem;
+	}
+.news-title li:last-child{
+	border-bottom:none;
+	}
+.news-title li a{
+	color:#666;
+	}
+.news-img{
+	width:1.82rem;
+	height:3.22rem;
+	margin-top:.35rem;
+	}
+.aboutus-img{
+	width:1.8rem;
+	height:1.59rem;
+	}
+.dd{
+	width:.08rem;
+	height:.08rem;
+	position:absolute;
+	top:.42rem;
+	left:0;
+	border-radius:50%;
+	background-color:#bbb;
+	}
+.aboutus-title{
+	font-size:.26rem;
+	color:#666;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	display:box;
+	display:-webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient:vertical;
+	line-height:.55rem;
+	}
+/*---17/03/08 添加新域名弹层---*/
+.zhezhao-bg
+{
+    display:none;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    left: 0;
+    top: 0;
+    z-index:1010;
+    background: #000000;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+.newph
+{    
+    width:7.2rem;
+    height:7.2rem;
+    z-index:1011;
+    position:absolute;
+    background:url(../images/new-ph.png) center no-repeat;
+    background-size:100%;
+    display: table;
+    visibility: hidden;
+    top: -1rem;
+    left:50%;
+    margin-left:-3.6rem;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    transition: 1s all;
+    }
+.newph a
+{
+    width:7.2rem;
+    height:3rem;
+    position:absolute;
+    bottom:0;
+    z-index:1002;
+    display:block;
+    }
+.newph p
+{
+    display:none;
+    float:left;
+    width:100%;
+    margin:6rem 0 0 0;
+    text-align:center;
+    height:0.58rem;
+    line-height:0.58rem;
+    position:relative;
+    font-size:0.16rem;
+    color:#666666;
+    overflow:hidden;
+    }
+.newph p img
+{
+    position:absolute;
+    bottom:0.58rem;
+    left:50%;
+    margin-left:-0.21rem;
+    height:0.58rem;
+    }
+.open
+{
+    visibility: visible;
+    filter: alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+.zedailogo{
+	width:.6rem;
+	height:.6rem;
+	background:url(../images/new_img/zhaiedailogo.png) no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:.35rem;
+	left:.23rem;
+	}

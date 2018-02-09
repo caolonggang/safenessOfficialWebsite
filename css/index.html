@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="d1">
+<button id="btn">点我呀</button>
+<script>
+    var obj={
+        val:document.getElementById("d1").value
+    }
+    console.log(obj)
+    document.getElementById("btn").onclick=function(){
+        console.log(obj)
+    }
+
+</script>
+</body>
+</html>

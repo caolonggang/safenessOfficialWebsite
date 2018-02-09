@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>平安普惠-贷款试算器-车贷</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/computer.css" />
+	<script src="js/common.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+     <section class="business_tit">
+	    <a class="business_goback"></a>
+        <p class="tc business_txt">车贷试算器</p>
+    </section>
+    <section class="computer_list">
+	     <ul class="computer_hul clearfix">
+		    <li class="active" id="one1" onclick="setTab('one', 1, 2)">等额本息</li>
+		    <li id="one2" onclick="setTab('one', 2, 2)">等额本金</li>
+		 </ul>
+	</section>
+	<section id="con_one_1">
+	  <form name="form1">
+		  <ul  class="computer_h_con"> 
+		    <li><label>车价（万）</label><input type="tel" name="money1" placeholder="请输入车价" class="input_class"></li>
+			<li><label>首付</label><i></i><span class="select_r">2成</span><select id="select1" class="myselect"><option value="2">2成</option><option value="3">3成</option><option value="4">4成</option><option value="5">5成</option><option value="6">6成</option><option value="7">7成</option><option value="8">8成</option><option value="9">9成</option></select></li>
+			<li><label>期限（年）</label><i></i><span class="select_r">1年</span><select id="select2" class="myselect"><option value="1">1年</option><option value="2">2年</option><option value="3">3年</option><option value="4">4年</option><option value="5">5年</option></select></li>
+			<li><label>利率（%）</label><i></i><span class="select_r">2.75</span><select id="select3" class="myselect"><option value="v1">2.75</option><option value="v2">3.32</option><option value="v3">4.6</option></select></li>
+		  </ul>
+		  <input type="button" class="mybutton" onclick="count1()" value="开始试算">
+	  </form>
+	 </section>
+	 <section id="con_one_2"  style="display:none">
+	  <form name="form2">
+		  <ul  class="computer_h_con" >
+			<li><label>车价（万）</label><input type="tel" name="money2" placeholder="请输入车价" class="input_class"></li>
+			<li><label>首付</label><i></i><span class="select_r">2成</span><select id="select4" class="myselect"><option value="2">2成</option><option value="3">3成</option><option value="4">4成</option><option value="5">5成</option><option value="6">6成</option><option value="7">7成</option><option value="8">8成</option><option value="9">9成</option></select></li>
+			<li><label>期限（年）</label><i></i><span class="select_r">1年</span><select id="select5" class="myselect"><option value="1">1年</option><option value="2">2年</option><option value="3">3年</option><option value="4">4年</option><option value="5">5年</option></select></li>
+			<li><label>利率（%）</label><i></i><span class="select_r">2.75</span><select id="select6" class="myselect"><option value="v1">2.75</option><option value="v2">3.32</option><option value="v3">4.6</option></select></li>
+		  </ul>
+		  <input type="button" class="mybutton" onclick="count2()" value="开始试算">
+	  </form>
+	  </section>
+  </div>
+  <script>
+//select赋值
+$(".myselect").change(function(event){
+    var res= $("#"+this.id+' option:selected').text();
+	alert(res);
+   $(this).prev('.select_r').text(res);
+});
+
+
+function count1(){
+     var money1=document.form1.money1.value;  //车价
+	 if(money1 == ''){
+	   alert('请输入车价');
+	   return false;
+	 }
+	 var firstPay = $('#select1 option:selected').val();//选中的首付几成
+	 var day = $('#select2 option:selected').val();//期限
+	 var lv = $('#select3 option:selected').text();//利率
+	 $.cookie("carPrice",money1, {expires:1, path: '/'}); //车价cookie
+	 $.cookie("firstPay",firstPay, {expires:1, path: '/'}); //首付几成cookie
+	 $.cookie("day",day, {expires:1, path: '/'});//期限
+	 $.cookie("lv",lv, {expires:1, path: '/'});//利率
+	 location.href = "computer_car_detitle.html";
+}
+function count2(){
+     var money2=document.form2.money2.value;  //车价
+	 if(money2 == ''){
+	   alert('请输入车价');
+	   return false;
+	 }
+	 var firstPay = $('#select4 option:selected').val();//选中的首付几成
+	 var day = $('#select5 option:selected').val();//期限
+	 var lv = $('#select6 option:selected').text();//利率
+	 $.cookie("carPrice",money2, {expires:1, path: '/'}); //车价cookie
+	 $.cookie("firstPay",firstPay, {expires:1, path: '/'}); //首付几成cookie
+	 $.cookie("day",day, {expires:1, path: '/'});//期限
+	 $.cookie("lv",lv, {expires:1, path: '/'});//利率
+	 location.href = "computer_car_detitle.html";
+}
+</script>
+</body>
+
+</html>

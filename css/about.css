@@ -1,0 +1,25 @@
+/*关于我们*/
+.about1_tit{font-size:0.32rem;font-weight:bold;color:#333;padding:0.3rem}
+.about1_con{font-size:0.28rem;color:#666;padding:0 0.3rem 0.2rem;text-align:justify;line-height:0.5rem;text-indent:0.5rem;}
+.about1_con span{color:#f34a45}
+.about1_img{margin-top:0.5rem}
+.about_strong_r{font-size:0.3rem;color:#f34a45;font-weight:bold;padding:0 0.3rem 0.15rem}
+.about2_t{font-size:0.3rem;color:#333;padding:0 0.6rem 0.1rem}
+.about2_t2{font-size:0.28rem;color:#666;padding:0 0.6rem 0.2rem;line-height:0.5rem;text-align:justify}
+.myswiper-pagination{position:fixed !important;bottom:0.3rem;width:3.2rem;padding:0.15rem 0 0.1rem;left:50%;margin-left:-1.6rem;background:#000;opacity:0.3;border-radius:0.2rem;}
+.about_strong_r3{font-size:0.3rem;color:#f34a45;height:0.8rem;font-weight:bold;padding:0 0.65rem 0.15rem}
+.about3_t2{font-size:0.28rem;color:#666;padding:0 0.65rem 0.5rem;line-height:0.5rem;text-align:justify}
+.about4_t2{font-size:0.28rem;color:#666;padding:0 0.35rem 0.5rem;line-height:0.5rem;text-align:justify}
+.page3icon{position:absolute;width:0.2rem;z-index:9;height:0.2rem;left:0.25rem;top:0.12rem;background:url(../images/about3.png) no-repeat;background-size:0.2rem;}
+.line{position:absolute;top:0.12rem;bottom:0;left:0.35rem;border-left:1px solid #bfbfbf;}
+.strong{font-weight:bold}
+.about6_img{margin-top:2.3rem}
+.pr{position:relative}
+.fri {
+    font-size: 0.28rem;
+    color: #666;
+    padding: 0 0.3rem 0.2rem;
+    text-align: right;
+    line-height: 0.5rem;
+    text-indent: 0.5rem;
+}

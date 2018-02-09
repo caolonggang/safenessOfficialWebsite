@@ -1,0 +1,50 @@
+/*贷款计算器*/
+.computer_list{background:#fff;width:100%;height:auto}
+.computer_b{position:relative;height:1.5rem;display:block;}
+.computer_b p{position:absolute;height:1.5rem;line-height:1.5rem;font-size:0.32rem;color:#333;left:1.4rem;right:0;border-bottom:1px solid #e5e5e5}
+.computer_b p i{display:block;width:0.17rem;height:1.5rem;float:right;margin-right:0.5rem;background:url(../images/newlist_icon.png) no-repeat right center;background-size:100%}
+.computer_b span{display:block;width:0.56rem;height:0.5rem;position:absolute;left:0.45rem;top:0.5rem}
+.computer_b .span1{background:url(../images/house.png) no-repeat;background-size:100%;}
+.computer_b .span2{background:url(../images/car.png) no-repeat;background-size:100%;}
+.bor_no{border-bottom:none !important;}
+/* 房贷 */
+.computer_hul{height:1rem;line-height:1rem;}
+.computer_hul li {width:49.99%;height: 1rem;float: left;text-align: center;font-size: 0.32rem;color: #313131;border-bottom: 0.01rem solid #d9d9d6;border-right: 0.01rem solid #d9d9d6;background: #f7f7f7;}
+.computer_hul li.active {border-bottom: none;background: #fff;color: #f96045;border-top: 3px solid #ea5404;}
+.computer_h_con{padding-left:0.3rem;background:#fff;font-size:0.28rem;color:#313131}
+.computer_h_con li{height:1rem;line-height:1rem;position:relative;border-bottom:1px solid #d9d9d6;padding-right:0.4rem}
+.computer_h_con li span{display:block;float:right;margin-right:0.4rem}
+.computer_h_con li i{display:block;width:0.17rem;height:1rem;float:right;background:url(../images/newlist_icon.png) no-repeat right center;background-size:100%}
+.computer_h_con li .myselect{position:absolute;height:1rem;width:100%;top:0;left:0;opacity:0;}
+.input_class{text-align:right;float:right;height:1rem}
+.mybutton{display:block;width:4.8rem;height:0.95rem; -webkit-border-radius:0.15rem;border-radius:0.15rem;line-height:0.95rem;background:#ff574f;color:#fff;font-size:0.4rem;margin:0.8rem auto}
+/* 房贷详情 */
+.computer_detitle{background:#eb5603;color:#fff;padding-top:0.1rem}
+.com_tit{height:0.6rem;width:4rem;border:1px solid #fff;overflow:hidden;margin:0.3rem auto 0.4rem;-webkit-border-radius:0.3rem;border-radius:0.3rem;}
+.com_tit li{width:50%;height:0.6rem;float:left;text-align:center;line-height:0.6rem;font-size:0.26rem;}
+.com_tit li.active{background:#fff;color:#ea5404;}
+.computer_detitle .p1{color:#fff;font-size:0.26rem;text-align:center}
+.computer_detitle .p2{color:#fff;font-size:0.8rem;text-align:center}
+.detiele_top1{height:1.4rem}
+.detiele_top2{height:2rem}
+.com_main{height:1.4rem;background:#fff}
+.comp_ul{height:1.4rem;width:100%}
+.comp_ul li{width:25%;float:left;text-align:center;color:#666;font-size:0.22rem;padding-top:0.2rem}
+.comp_ul li p{color:#303030;font-size:0.4rem;}
+.detitlep{height:0.9rem;line-height:0.9rem;background:#efeff4;font-size:0.26rem;color:#666666;text-align:center;position:relative}
+.detitlep span{display:block;position:absolute;top:0;right:30%;width:0.31rem;height:0.9rem;background:url(../images/icon_up.png) no-repeat center;background-size:100%}
+.mytable{background:#fff;width:100%;overflow:hidden;border-collapse:collapse;color:#666;font-size:0.28rem}
+.mytable tr{height:0.7rem;border-bottom:1px solid #e5e5e5;}
+.mytable tr td{overflow:hidden;}
+.mytable tr .tdf{text-indent:0.3rem}
+.mytable tr .tdl{padding-right:0.3rem;}
+.mytable tr{overflow:hidden}
+.load{color:#999999;font-size:0.28rem;height:0.9rem;line-height:0.9rem;background:#efeff4;text-align:center;position:relative;}
+.load i{display:block;position:absolute;left:32%;top:0;width:0.5rem;height:0.9rem;background:url(../images/loading.gif) no-repeat center;background-size:100%}
+.dn{display:none}
+
+
+.detitles .det_top{height:0.7rem;border-bottom:1px solid #e5e5e5;line-height:0.7rem}
+.detitles .det_top span{display:block;float:left;height:0.7rem;line-height:0.7rem;width:25%;color:#666;font-size:0.28rem;}
+.detitles .det_top .span1{text-indent:0.3rem}
+.detitles .mytablebox{height:4.2rem;overflow-y:auto}

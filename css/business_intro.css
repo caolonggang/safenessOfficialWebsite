@@ -1,0 +1,29 @@
+/*业务介绍*/
+.pro_i{height:0.6rem;line-height:0.6rem;background:#efeff4;font-size:0.22rem;color:#666666;text-indent:0.35rem}
+.pro_con{height:2.7rem;padding-left:0.3rem;padding-top:0.3rem;padding-bottom:0.3rem;background:#fff}
+.view_con{height:3.2rem;padding-left:0.3rem;padding-top:0.3rem;padding-bottom:0.3rem;background:#fff}
+.swiper-container{width:100%;height:2.1rem;overflow:hidden;}
+.swiper-container2{width:100%;height:3rem;overflow:hidden;position:relative}
+.swiper-wrapper{}
+.changeheight,.chang{width:3.2rem;height:2.1rem;float:left;}
+.changeheight,.chang a{width:3.2rem;height:2.1rem;display:block}
+.changeheight a{height:2.7rem !important;position:relative}
+.changeheight img,.chang img{width:3.2rem;height:2.1rem;}
+.view_text{font-size:0.24rem;color:#999;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.changeheight a .black_full{width:3.2rem;height:2.1rem;position:absolute;background:#000;-khtml-opacity:0.4;opacity:0.4;top:0;left:0;}
+.changeheight a .play{width:0.62rem;height:0.62rem;position:absolute;left:50%;margin-left:-0.31rem;top:0.74rem;background:url(../images/play.png) no-repeat;background-size:100%;}
+.bgwhite{background:#fff}
+.bgwhite .new_list_one li:last-child{border-bottom:none}
+.pt45{padding-bottom:0.45rem}
+.swiper-container2 .swiper-wrapper .banners{width:100%;height:100%}
+/* ..swiper-container2 .swiper-wrapper .banners a{display:block;width:100% !important;height:auto;} */
+.swiper-container2 .swiper-wrapper .banners img{width:100%;height:100%;}
+
+
+.chang .bg1{background:url(../images/business_pro1.png) no-repeat center;background-size:100%}
+.chang .bg2{background:url(../images/business_pro2.png) no-repeat center;background-size:100%}
+.chang .bg3{background:url(../images/business_pro3.png) no-repeat center;background-size:100%}
+.chang .bg4{background:url(../images/business_pro4.png) no-repeat center;background-size:100%}
+.chang .bgcommon .ptit1{color:#fff;font-size:0.4rem;text-align:center;font-weight:bold;padding-top:0.15rem}
+.chang .bgcommon .ptit2{color:#fff;font-size:0.2rem;text-align:center}
+.chang .bgcommon .ptit3{color:#fff;font-size:0.2rem;text-align:center;width:1.1rem;height:0.4rem;line-height:0.4rem;margin:0.1rem auto;border:1px solid #fff;border-radius:5px;}

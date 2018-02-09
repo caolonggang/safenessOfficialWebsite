@@ -1,0 +1,15 @@
+.clsq-class{width:100%;background:#fff};
+.clsq-class ul{border-top:1px solid #e3e3e3;}
+.clsq-class ul li{position:relative;height:1rem;border-bottom:1px solid #e3e3e3;padding:0 0.3rem;font-size:0.28rem;line-height:1rem}
+.clsq-class ul li a{display:block;color:#313131}
+.next-icon{width:.17rem;height:.26rem;display:block;background:url(../images/newlist_icon.png) no-repeat;background-size:100%;position:absolute;top:.37rem;right:.3rem;}
+.idcard,.zm-jop,.zm-sr,.zm-car,.zm-jzzm,.zm-cx,.zm-sx,.zm-fc,.zm-zz,.hukouben,.bankcard{position:absolute;top:0;left:0;width:100%;height:auto;background-color:#fff;display:none;}
+.list1{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#fff;}
+.in-content{width:100%;padding:0 .3rem;}
+.in-title{font-size:.3rem;color:#303030;border-bottom:1px dashed #d9d9d9;padding:.5rem 0 .2rem;}
+.in-img,.in-img1{width:5.12rem;margin:0 auto;padding-top:.3rem;}
+.in-img1{width:6.5rem;}
+.download-mb{padding-top:.3rem;}
+.download-mbbtn{width:2.5rem;height:.88rem;display:block;border:1px solid #f34a45;line-height:.88rem;text-align:center;color:#f34a45;border-radius:.1rem;font-size:.32rem;}
+.small-title{font-size:.3rem;color:#303030;padding-top:.1rem;}
+.foot_copyright{position:absolute;left:0;bottom:0;width:100%;height:100%;}

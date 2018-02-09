@@ -1,0 +1,9 @@
+/*业务介绍*/
+.introduce_con{padding:0.1rem 0.3rem 1rem;background:#f8f8f8}
+.introduce_con .intro_p1{color:#303030;font-size:0.3rem;font-weight:bold;padding:0.3rem 0;}
+.introduce_con .intro_p2{color:#666;font-size:0.3rem;line-height:0.5rem;padding-bottom:0.2rem;text-indent:0.6rem;text-align:justify }
+.introduce_con .intro_p3{color:#666;font-size:0.3rem;line-height:0.5rem;text-align:justify;padding-bottom:0.24rem}
+.introduce_con .intro_p4{color:#f95a16;font-size:0.3rem;line-height:0.5rem;font-weight:bold;padding-bottom:0.24rem}
+.introduce_con .intro_p3 i{display:block;width:0.16rem;height:0.16rem;float:left;margin-top:0.15rem;background:url(../images/ywjs_icon.png) no-repeat left top;background-size:0.16rem;}
+.introduce_con .intro_p3 .intro_conr{float:right;display:block;width:96%}
+.iapply{width:100%;max-width:750px;height:1rem;background:#ff584f;color:#fff;font-size:0.4rem;position:fixed;bottom:0;z-index:2;}

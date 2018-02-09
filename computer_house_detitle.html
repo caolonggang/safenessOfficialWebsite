@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>平安普惠-贷款试算器-房贷详情</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/computer.css" />
+	<script src="js/common.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+     <section class="business_tit">
+	    <a class="business_goback"></a>
+        <p class="tc business_txt">房贷试算器</p>
+    </section>
+    <section class="computer_detitle detiele_top1">
+	    <ul class="com_tit">
+		   <li class="active" id="one1" onclick="setTab('one', 1, 2)">等额本息</li>
+		   <li id="one2" onclick="setTab('one', 2, 2)">等额本金</li>
+		</ul>
+	</section>
+	<!-- 等额本息 -->
+	<section id="con_one_1">
+		<div class="computer_detitle detiele_top2">
+			<p class="p1">每月月供参考(元）</p>
+			<p class="p2" id="n1">6806.56</p>
+		</div>
+		<div class="com_main">
+		   <ul class="comp_ul">
+			  <li>总利息（万）<p id="n2">18.06</p></li>
+			  <li>总还款（万）<p id="n3">68.06</p></li>
+			  <li>总贷款（万）<p id="n4">50</p></li>
+			  <li>贷款月数<p id="n5">240</p></li>
+		   </ul>
+		</div>
+		<div class="detitlep">等额本息还款详情<span></span></div>
+		<div class="detitles">
+		    <p class="det_top"><span class="span1">月份</span><span>月供本金</span><span>月供利息</span><span>剩余</span></p>
+			<div class="mytablebox">
+				<table class="mytable" id="mytable">
+				</table>
+			</div>
+		</div>
+	</section>
+	<!-- 等额本金 -->
+	<section id="con_one_2" style="display:none">
+		<div class="computer_detitle detiele_top2">
+			<p class="p1">每月月供参考(元）</p>
+			<p class="p2" id="n11">7638.31</p>
+		</div>
+		<div class="com_main">
+		   <ul class="comp_ul">
+			  <li>总利息（万）<p id="n22">20.12</p></li>
+			  <li>总还款（万）<p id="n33">71.15</p></li>
+			  <li>总贷款（万）<p id="n44">50</p></li>
+			  <li>贷款月数<p id="n55">240</p></li>
+		   </ul>
+		</div>
+		<div class="detitlep">等额本息还款详情<span></span></div>
+		<div class="detitles">
+		    <p class="det_top"><span class="span1">月份</span><span>月供本金</span><span>月供利息</span><span>剩余</span></p>
+			<div class="mytablebox">
+				<table class="mytable" id="mytable2">
+				</table>
+			</div>
+		</div>
+	</section>
+  </div>
+<script>
+$(function(){
+     var dkType = $.cookie("lx"); //获取贷款类型cookie
+     var years = Number($.cookie("years")); //获取贷款期限cookie
+	 if(dkType == '公积金贷款'){
+	     var gjjmoney = Number($.cookie("gjjmoney"));//公积金贷款金额
+	     var lv = Number($.cookie("lvs"));  //公积金贷款利率
+		 //alert('公积金贷款金额：'+gjjmoney+'公积金贷款利率'+lv+'');
+	 }else if(dkType == '商业贷款'){
+	     var symoney = Number($.cookie("symoney"));   //商业贷款金额：
+	     var lv = Number($.cookie("lvs"));  //商业贷款利率
+		// alert('商业贷款金额：'+symoney+'商业贷款利率'+lv+'');
+	 }else{
+	     var gjjmoney = Number($.cookie("gjjmoney"));  //公积金贷款金额：
+	     var symoney = Number($.cookie("symoney"));  //商业贷款金额：
+	     var gjjlv = Number($.cookie("gjjlv"));   //公积金贷款利率
+	     var sylv = Number($.cookie("sylv"));  //商业贷款利率
+		 //== alert('公积金贷款金额'+gjjmoney+'公积金贷款利率：'+gjjlv+'商业贷款金额：'+symoney+'商业贷款利率'+sylv+'');
+	 }
+	  var mon = years*12; //贷款期限月
+	  var monlv = lv/100/12; //月利率
+	  var mongjjlv = gjjlv/100/12; //公积金贷款月利率
+	  var monsylv = sylv/100/12; //商业贷款月利率
+	  var M = (1+monlv);
+	  var M2 = (1+mongjjlv);
+	  var M3 = (1+monsylv);
+	 //公积金贷款 等额本息 计算开始///////////////////////
+	 var i =1;
+     var  monthGive =  (gjjmoney*monlv*Math.pow(M, mon))/(Math.pow(M, mon)-1) ;                  //每月月供
+     var countlx = mon*monthGive-gjjmoney;  //总利息
+     var count = gjjmoney+countlx;  //还款总额
+     //公积金贷款 等额本金 计算开始/////////////
+	 var monbj2 =  gjjmoney/mon;   //月供本金
+	 var  monthGive2 =  (gjjmoney/mon)+(gjjmoney-monbj2*1)*monlv ;  //每月月供(按第一个月算)
+     var countlx2 = (mon+1)*gjjmoney*monlv/2;  //总利息
+     var count2 = gjjmoney+countlx2;  //还款总额
+	 ////////////商业贷款  等额本息 计算开始////////
+	 // var  monthGive3 =  (symoney*monlv*(1+monlv)*(1+monlv)*mon)/((1+monlv)*(1+monlv)*mon-1);  //每月月供
+	  var  monthGive3 =  (symoney*monlv*Math.pow(M, mon))/(Math.pow(M, mon)-1);  //每月月供
+	  var countlx3 = mon*monthGive3-symoney;  //总利息
+	  var count3 = symoney+countlx3;  //还款总额
+	  ////////////商业贷款  等额本金 计算开始////////
+	    var monbj4 =  symoney/mon;   //月供本金
+	  var  monthGive4 =  (symoney/mon)+(symoney-monbj4*1)*monlv;  //每月月供(按第一个月)
+	  var countlx4 = (mon+1)*symoney*monlv/2;  //总利息  
+	  var count4 = symoney+countlx4;  //还款总额
+	
+	 
+	  ////////////组合贷款  等额本息   计算开始 ///////
+	   var conuts = gjjmoney+symoney;//贷款总额
+	   var  monthGive5 =  (gjjmoney*mongjjlv*Math.pow(M2, mon))/(Math.pow(M2, mon)-1);  //公积金每月月供
+	   var  monthGive6 =  (symoney*monsylv*Math.pow(M3, mon))/(Math.pow(M3, mon)-1);  //商业每月月供
+	   var  monthGive7 =  monthGive5+monthGive6;  //每月月供
+	   var countlx5 = mon*monthGive5-gjjmoney;//公积金贷款总利息
+	   var countlx6 = mon*monthGive6-symoney;//商业贷款总利息
+	   var countlx7 = countlx5+countlx6;  //总利息
+       var count5 = gjjmoney+symoney+countlx7; //还款总额
+      
+	   
+      ////////////组合贷款  等额本金   计算开始 ///////
+        var monbj8 = gjjmoney/mon;//公积金贷款月供本金
+       var monbj9 = symoney/mon;//商业贷款月供本金
+	   var monbj10 = monbj8+monbj9;//月供本金
+       var  monthGive8 =  (gjjmoney/mon)+(gjjmoney-monbj10*1)*mongjjlv;  //公积金每月月供(第一个月)
+       var  monthGive9 =  (symoney/mon)+(symoney-monbj10*1)*monsylv;  //商业每月月供(第一个月)
+	   var monthGive10 = monthGive8+monthGive9; //每月月供
+	  
+	   var countlx8 = (mon+1)*gjjmoney*mongjjlv/2;//公积金贷款总利息
+	   var countlx9 = (mon+1)*symoney*monsylv/2;//商业贷款总利息
+	   var countlx10 = countlx8+countlx9;  //总利息   
+	   
+       var count6 = gjjmoney+symoney+countlx10; //还款总额
+	   
+     
+	   
+	
+	  
+	 //带入开始
+     if(dkType == '公积金贷款'){
+	      var n1 = monthGive*10000;
+	      var n11 = monthGive2*10000;
+	     $('#n1').text(n1.toFixed(2));
+	     $('#n2').text(countlx.toFixed(2));
+	     $('#n3').text(count.toFixed(2));
+	     $('#n4').text(gjjmoney.toFixed(2));
+	     $('#n5').text(mon);
+		 $('#n11').text(n11.toFixed(2));
+	     $('#n22').text(countlx2.toFixed(2));
+	     $('#n33').text(count2.toFixed(2));
+	     $('#n44').text(gjjmoney.toFixed(2));
+	     $('#n55').text(mon);
+		for(var i=1;i<=mon;i++){
+		var ii = i-1;
+		    var monbj =  gjjmoney*monlv* Math.pow(M, ii)/(Math.pow(M, mon)-1);   //月供本金
+			var monbjs =monbj*10000;
+			var a = Math.pow(M, mon)-Math.pow(M, ii);
+			var monlx = gjjmoney*monlv*a/(Math.pow(M, mon)-1); //月供利息
+			var monlxs = monlx*10000;
+			 var no_give = gjjmoney*monlv*Math.pow(M, mon)*(mon-i)/(Math.pow(M, mon)-1)*10000;//剩余还款
+			$('#mytable').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbjs.toFixed(2)+'</td><td width="25%">'+monlxs.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give.toFixed(2)+'</td></tr> ');
+		}
+		for(var i=1;i<=mon;i++){
+		        var monbj2s = monbj2*10000;
+		       var molx2 = (gjjmoney-monbj2*i)*monlv; //月供利息
+			   var molx2s = molx2*10000;
+			    var aa = 1-(i-1)/2/mon;
+			    var no_give2 = gjjmoney+gjjmoney*monlv*(mon+1)/2-gjjmoney*i/mon-gjjmoney*monlv*i*aa;//剩余还款
+		      var no_give2s =no_give2*10000;
+			$('#mytable2').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbj2s.toFixed(2)+'</td><td width="25%">'+molx2s.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give2s.toFixed(2)+'</td></tr> ');
+		}
+	 }else if(dkType == '商业贷款'){
+	     var n6 = monthGive3*10000;
+	     var n66 = monthGive4*10000;
+	     $('#n1').text(n6.toFixed(2));
+	     $('#n2').text(countlx3.toFixed(2));
+	     $('#n3').text(count3.toFixed(2));
+	     $('#n4').text(symoney.toFixed(2));
+	     $('#n5').text(mon);
+		 $('#n11').text(n66.toFixed(2));
+	     $('#n22').text(countlx4.toFixed(2));
+	     $('#n33').text(count4.toFixed(2));
+	     $('#n44').text(symoney.toFixed(2));
+	     $('#n55').text(mon);
+		for(var i=1;i<=mon;i++){
+		     var ii = i-1;
+		     var monbj3 =  symoney*monlv*Math.pow(M, ii)/(Math.pow(M, mon)-1);   //月供本金
+			 var monbj3s = monbj3*10000;
+	         var molx3 =  symoney*monlv*(Math.pow(M, mon)-Math.pow(M, ii))/(Math.pow(M, mon)-1);   //月供利息
+			 var molx3s = molx3*10000;
+			  var no_give3 = symoney*monlv*Math.pow(M, mon)*(mon-i)/(Math.pow(M, mon)-1)*10000;//剩余还款
+			$('#mytable').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbj3s.toFixed(2)+'</td><td width="25%">'+molx3s.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give3.toFixed(2)+'</td></tr> ');
+		}
+		for(var i=1;i<=mon;i++){
+		        var a =  (symoney/mon)+(symoney-monbj4*i)*monlv;//每月月供
+		       var molx4 =  (symoney-a*i)*monlv;   //月供利息
+		        var monbj4s = monbj4*10000;
+				var molx4s =molx4*10000;
+				 var aa2 = 1-(i-1)/2/mon;
+			    var no_give4 = symoney+symoney*monlv*(mon+1)/2-symoney*i/mon-symoney*monlv*i*aa2;//剩余还款
+		      var no_give4s =no_give4*10000;
+			$('#mytable2').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbj4s.toFixed(2)+'</td><td width="25%">'+molx4s.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give4s.toFixed(2)+'</td></tr> ');
+		}   
+	  
+	 } else{
+	     var n9 = monthGive7*10000;
+	     var n99 = monthGive10*10000;
+	     $('#n1').text(n9.toFixed(2));
+	     $('#n2').text(countlx7.toFixed(2));
+	     $('#n3').text(count5.toFixed(2));
+	     $('#n4').text(conuts.toFixed(2));
+	     $('#n5').text(mon);
+		 $('#n11').text(n99.toFixed(2));
+	     $('#n22').text(countlx10.toFixed(2));
+	     $('#n33').text(count6.toFixed(2));
+	     $('#n44').text(conuts.toFixed(2));
+	     $('#n55').text(mon);
+		for(var i=1;i<=mon;i++){
+		     var ii = i-1;
+		      var monbj5 = gjjmoney*mongjjlv*Math.pow(M2, ii)/(Math.pow(M2, mon)-1);//公积金贷款月供本金
+			   var monbj6 = symoney*monsylv*Math.pow(M3, ii)/(Math.pow(M3, mon)-1);//商业贷款月供本金
+			   var monbj7 = monbj5+monbj6;//月供本金
+			   var monbj7s = monbj7*10000;
+			   var molx5 = gjjmoney*mongjjlv*(Math.pow(M2, mon)-Math.pow(M2, ii))/(Math.pow(M2, mon)-1);//公积金贷款月供利息
+			   var molx6 = symoney*monsylv*(Math.pow(M3, mon)-Math.pow(M3, ii))/(Math.pow(M3, mon)-1);//商业贷款月供利息
+			   var monlx7 = molx5+molx6;//月供利息
+			   var monlx7s = monlx7*10000;
+			   var no_give5 = symoney*monsylv*Math.pow(M3, mon)*(mon-i)/(Math.pow(M2, mon)-1)*10000;//商业剩余还款
+			   var no_give6= gjjmoney*mongjjlv*Math.pow(M2, mon)*(mon-i)/(Math.pow(M3, mon)-1)*10000;//公积金剩余还款
+			   var no_give7 = no_give5+no_give6;//总剩余还款
+			$('#mytable').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbj7s.toFixed(2)+'</td><td width="25%">'+monlx7s.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give7.toFixed(2)+'</td></tr> ');
+		}
+		for(var i=1;i<=mon;i++){
+		          var molx8 = (gjjmoney-monbj8*i)*mongjjlv;//公积金贷款月供利息
+	           var molx9 =(symoney-monbj9*i)*monsylv;//商业贷款月供利息
+	           var monlx10 = molx8+molx9;//月供利息
+			   var monlx10s = monlx10*10000;
+			   var monbj10s = monbj10*10000;
+			    var aa3 = 1-(i-1)/2/mon;
+			    var no_give8 = gjjmoney+gjjmoney*mongjjlv*(mon+1)/2-gjjmoney*i/mon-gjjmoney*mongjjlv*i*aa3;//公积金剩余还款
+			    var no_give9 = symoney+symoney*monsylv*(mon+1)/2-symoney*i/mon-symoney*monsylv*i*aa3;//商业剩余还款
+		        var no_give10 =(no_give8+no_give8)*10000;
+			$('#mytable2').append('<tr><td class="tdf" width="25%">'+i+'月</td><td width="25%">'+monbj10s.toFixed(2)+'</td><td width="25%">'+monlx10s.toFixed(2)+'</td><td class="tdl" width="25%">'+no_give10.toFixed(2)+'</td></tr> ');
+		}   
+	     
+	 
+	 }
+	 
+	
+
+})
+
+
+
+
+$('.detitlep').click(function(){
+     var f = $(this).next('.detitles').is(":visible");
+	 if(f==false){
+		  $(this).next('.detitles').slideDown();
+		  $(this).children('span').css('background-image','url(images/icon_up.png)');
+	 }else{
+		  $(this).next('.detitles').slideUp();
+		  $(this).children('span').css('background-image','url(images/icon_down.png)');
+	 }
+})
+</script>
+</body>
+
+</html>

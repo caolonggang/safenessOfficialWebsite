@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>平安普惠移动官网_银行小额无抵押贷款</title>
+    <meta name="keywords" content="平安普惠,小额贷款,银行贷款,无抵押贷款,个人贷款,信用贷款,手机贷款">
+    <meta name="description" content="平安普惠整合了平安直通贷款、陆金所P2P小额信贷、平安易贷三个产品,致力于为个人、企业提供银行小额无抵押贷款">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/common.css"/>
+	<script src="js/jquery.js"></script>
+</head>
+<body style="background-color:#efeff4">
+<script type="text/javascript">
+//页面加载完成之后去掉Loading
+$(document).ready(function(){
+   queryHintCallback("loadingBox");
+
+});
+</script>
+<div id="loadingBox"><img src="images/loading.gif"></div> 
+
+  <div class="wrapper">
+     <section class="logo-box">
+        <img src="images/logo.png" width="50%"/>
+     </section>   
+     <section class="errorbox">
+       <div class="errorimg">
+         <img src="images/new_img/errorimg.png" width="100%"/>
+       </div>
+       <p style="color:#f05a23;font-size:.48rem;text-align:center">哎呀，掉坑了！</p>
+       <p style="font-size:.28rem;color:#666;padding:.3rem 1rem;text-align:center;">为了更好的提供服务，服务器正在努力升级，请稍后再来～</p>
+       <p class="cw-tit1"><span id="num">5</span>秒后自动返回首页</p>
+       <a href="index.html" class="goindexweb-btn">立即返回首页</a>
+     </section>
+          <section class="copyright pt2" style="background-color:#efeff4">
+        <p class="bottom_logo"><img src="images/bottom_logo.png" width="100%" height="auto"></p>
+        <p class="tc bottom_txt">版权所有©中国平安保险（集团）股份有限公司 未经许可不得复制、转载或摘编，违者必究！<br>
+    Copyright©PING AN INSURANCE(GROUP)COMPANY OF CHINA,LTD.All Rights Reserved<br>
+    ICP许可证号 粤ICP备06118290号-11</p>
+    </section>
+
+ </div>
+
+</body>
+<script>
+ function jump(count) {    
+                window.setTimeout(function(){    
+                    count--;    
+                    if(count > 0) {    
+                        $('#num').attr('innerHTML', count);    
+                        jump(count);    
+                    } else {    
+                        window.location.href="index.html";    
+                    }    
+                }, 1000);    
+            }    
+            jump(5);    
+</script>
+</html>
